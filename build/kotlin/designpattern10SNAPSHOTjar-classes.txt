@@ -1,1 +1,1 @@
-/Users/yoprogramo/Documents/NewStart/designpattern/build/classes/kotlin/main/MainKt.class
+/Users/yoprogramo/Documents/NewStart/designpattern/build/classes/kotlin/main/MainKt.class:/Users/yoprogramo/Documents/NewStart/designpattern/build/classes/kotlin/main/singleton/NoMoviesList.class:/Users/yoprogramo/Documents/NewStart/designpattern/build/classes/kotlin/main/singleton/NoMoviesListKt.class

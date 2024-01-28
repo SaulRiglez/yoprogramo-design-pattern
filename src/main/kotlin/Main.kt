@@ -1,7 +1,8 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import singleton.NoMoviesList
+import singleton.myFavoriteQuickAndAngryMovies
+import singleton.yourFavoriteQuickAndAngryMovies
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main(args: Array<String>) {
+    println(myFavoriteQuickAndAngryMovies === yourFavoriteQuickAndAngryMovies)
+    NoMoviesList.printSomething()
 }
