@@ -1,3 +1,5 @@
+import creational.abstractfactory.property
+import creational.builder.MailBuilder
 import creational.factory.ChessPiece
 import creational.factory.createPiece
 import creational.singleton.NoMoviesList
@@ -13,7 +15,24 @@ import java.awt.image.BufferedImage
 import java.io.File
 import javax.imageio.ImageIO
 
-fun main() = runBlocking {
+
+
+fun main(){
+    println(property("port:8080").toString())
+    val portProperty = property("port: 8080")
+    val environment = property("environment: production")
+
+    val port: Int = portProperty.value as Int
+
+
+    val email = MailBuilder()
+        .to(listOf("Yoprogramo@gmail.com"))
+        .cc(listOf("saul.riglez@gmail.com"))
+        .build()
+}
+
+
+fun main_static_factory() = runBlocking {
     println(Server.withPort(80))
 }
 
