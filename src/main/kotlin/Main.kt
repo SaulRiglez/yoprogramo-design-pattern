@@ -6,6 +6,8 @@ import creational.singleton.NoMoviesList
 import creational.singleton.myFavoriteQuickAndAngryMovies
 import creational.singleton.yourFavoriteQuickAndAngryMovies
 import creational.staticfactory.Server
+import functional.MutableObj
+import functional.MutableVal
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -16,21 +18,35 @@ import java.io.File
 import javax.imageio.ImageIO
 
 
+fun main() {
+    val mutableObj: MutableObj = MutableObj()
+    println("MutableObj $mutableObj")
 
-fun main(){
-    println(property("port:8080").toString())
-    val portProperty = property("port: 8080")
-    val environment = property("environment: production")
+    mutableObj.value = "Changed"
 
-    val port: Int = portProperty.value as Int
+    println("MutableObj $mutableObj")
+}
+fun fib(n: Int): Int {
+  fun process(num: Int): Int = if (num == 0 || num == 1) {
+        num
+    } else {
+        process(num - 1) + process(num - 2)
+    }
+    return process(n)
+}
 
+/*
+F0 = 0 (applies only to the first integer)
+F1 = 1 (applies only to the second integer)
+Fn = Fn-1 + Fn-2 (applies to all other integers)
+ */
 
+fun main_builder() {
     val email = MailBuilder()
         .to(listOf("Yoprogramo@gmail.com"))
         .cc(listOf("saul.riglez@gmail.com"))
         .build()
 }
-
 
 fun main_static_factory() = runBlocking {
     println(Server.withPort(80))

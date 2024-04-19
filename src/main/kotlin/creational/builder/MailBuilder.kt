@@ -28,7 +28,7 @@ class MailBuilder {
     }
 
     fun to(to: List<String>): MailBuilder {
-        this.cc = to
+        this.to = to
         return this
     }
 
