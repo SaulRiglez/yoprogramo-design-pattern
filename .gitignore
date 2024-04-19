@@ -3,8 +3,5 @@
 /build/
 **/build/
 /gradle/
-/build/
-/.gradle/
-/build/
 /.gradle/
 /.idea/
